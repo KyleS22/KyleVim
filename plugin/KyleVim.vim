@@ -1,4 +1,6 @@
 
+let g:kyle_vim_version = "0.0.0"
+
 " Make sure this plugin is runnable
 if !has("python3")
 	echo "Vim must be compiled with +python3 to use KyleVim"

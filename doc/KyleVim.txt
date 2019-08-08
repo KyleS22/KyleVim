@@ -1,0 +1,52 @@
+*KyleVim.txt* Handy vim functionality for everyday use
+
+TODO: Insert awesome ascii art logo
+
+====================================================================
+CONTENTS                                            *KyleVimContents*
+
+    1. Usage ................ |KyleVimUsage|
+    2. Mappings ............. |KyleVimMappings|
+    3. License .............. |KyleVimLicense|
+    4. Bugs ................. |KyleVimBugs|
+    5. Contributing ......... |KyleVimContributing|
+    6. Changelog ............ |KyleVimChangelog|
+    7. Credits .............. |KyleVimCredits|
+
+====================================================================
+Section 1: Usage                                       *KyleVimUsage*
+
+TODO: Usage - Simple usage quick start, details go in mappings
+
+====================================================================
+Section 2: Mappings                                    *KyleVimMappings*
+
+TODO: Mappings
+
+====================================================================
+Section 3: License                                     *KyleVimLicense*
+
+TODO: License - Don't put the whole license, just which one and where to find
+more details
+
+====================================================================
+Section 4: Bugs                                        *KyleVimBugs*
+
+TODO: Bugs - Where to report them and any outstanding ones
+
+====================================================================
+Section 5: Contributing				       *KyleVimContributing*
+
+TODO: Contributing
+
+
+====================================================================
+Section 6: Changelog                                   *KyleVimChangelog*
+
+0.0.0
+	- Added documentation.  Wooho!
+
+====================================================================
+Section 7: Credits                                     *KyleVimCredits*
+
+TODO: Credits
