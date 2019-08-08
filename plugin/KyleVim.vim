@@ -9,8 +9,13 @@ if exists('g:KyleVim_plugin_loaded')
 	finish
 endif
 
+
+colorscheme codedark
+
 let s:plugin_root_dir = fnamemodify(resolve(expand('<sfile>p')), ':h')
 
+
+" Load the python modules
 python3 << EOF
 
 import sys
@@ -24,5 +29,6 @@ sys.path.insert(0, python_root_dir)
 import KyleVim
 
 EOF
+
 
 let g:KyleVim_plugin_loaded = 1

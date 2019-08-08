@@ -9,4 +9,3 @@ Description: The base python script for accessing the plugin from vim
 
 """
 
-print("Hell from python source code!")
