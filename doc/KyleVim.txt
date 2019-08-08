@@ -46,7 +46,13 @@ KyleVim is available under the MIT license.  More information is available at: h
 ====================================================================
 Section 5: Bugs                                          *KyleVimBugs*
 
-TODO: Bugs - Where to report them and any outstanding ones
+I am currently not aware of any bugs, but I'm sure there are a few!
+
+If you find any issues, please report them using the 'Issues' tab at the main repository, or click this link: https://github.com/KyleS22/KyleVim/issues
+
+A good bug report is as specific and descriptive as possible.  Please include as many details about your setup as possible.
+
+Thanks!
 
 ====================================================================
 Section 6: Contributing				 *KyleVimContributing*
