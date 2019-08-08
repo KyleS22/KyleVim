@@ -41,8 +41,7 @@ g:KyleVim_Disable_Colours
 ====================================================================
 Section 4: License                                    *KyleVimLicense*
 
-TODO: License - Don't put the whole license, just which one and where to find
-more details
+KyleVim is available under the MIT license.  More information is available at: https://choosealicense.com/licenses/mit/
 
 ====================================================================
 Section 5: Bugs                                          *KyleVimBugs*
@@ -64,4 +63,7 @@ Section 7: Changelog                                *KyleVimChangelog*
 ====================================================================
 Section 8: Credits                                    *KyleVimCredits*
 
-TODO: Credits
+This plugin is a culmination of many years using vim and adding various 'hacks' to my vimrc.  It is largely inspired by many
+other plugins and hacks found around the web.  This is a general thanks to those who post their solutions online for others to find.
+
+Written and maintained by Kyle Seidenthal
