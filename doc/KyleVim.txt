@@ -51,7 +51,11 @@ TODO: Bugs - Where to report them and any outstanding ones
 ====================================================================
 Section 6: Contributing				 *KyleVimContributing*
 
-TODO: Contributing
+The main repository can be found at https://github.com/KyleS22/KyleVim
+
+If you would like to make a contribution, please create a new branch for your feature and create a pull request when ready.
+
+Thanks!
 
 
 ====================================================================
