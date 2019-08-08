@@ -41,7 +41,7 @@ Don't like one of these features, but want the rest?  You can easily disable ind
 let g:KyleVim_Disable_Colours = 1
 ```
 
-A full description on how to disable features is available in the [documentation](https://github.com/KyleS22/KyleVim/blob/1ec23fbfc9b3c8f3c4655e55149acf72bed20a7f/doc/KyleVim.txt#L28).
+A full description on how to disable features is available in the [documentation](https://github.com/KyleS22/KyleVim/blob/1ec23fbfc9b3c8f3c4655e55149acf72bed20a7f/doc/KyleVim.txt#L28-L40).
 
 # Installation
 This plugin can be installed using [Vundle](https://github.com/VundleVim/Vundle.vim).  Simply add the following line to your vimrc
