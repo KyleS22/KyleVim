@@ -11,81 +11,93 @@ if exists('g:KyleVim_plugin_loaded')
 	finish
 endif
 
-" Set colourscheme
-colorscheme codedark
+if !exists('g:KyleVim_Disable_Colours')
+	" Set colourscheme
+	colorscheme codedark
+endif
 
-" Set statusline colours
-hi User1 ctermfg=75 ctermbg=NONE
-hi User2 ctermfg=9 ctermbg=NONE
-hi User3 ctermfg=65 ctermbg=NONE
-hi User4 ctermfg=65 ctermbg=NONE
-hi User5 ctermfg=226 ctermbg=NONE
 
-" Customize statusline
-set statusline=
-set statusline +=%1*%y%*                "file type
-set statusline +=%4*\ %<%F%*            "full path
-set statusline +=%2*%m%*                "modified flag
-set statusline +=%1*%=%5l%*             "current line
-set statusline +=%2*/%L%*               "total lines
-set statusline +=%1*%4v\ %*             "virtual column number
-set statusline +=%5*\ %(<%{b:gitstatus}>%)
+if !exists('g:KyleVim_Disable_Statusline')
+	" Set statusline colours
+	hi User1 ctermfg=75 ctermbg=NONE
+	hi User2 ctermfg=9 ctermbg=NONE
+	hi User3 ctermfg=65 ctermbg=NONE
+	hi User4 ctermfg=65 ctermbg=NONE
+	hi User5 ctermfg=226 ctermbg=NONE
 
-" Always display the status line
- set laststatus=2
+	" Customize statusline
+	set statusline=
+	set statusline +=%1*%y%*                "file type
+	set statusline +=%4*\ %<%F%*            "full path
+	set statusline +=%2*%m%*                "modified flag
+	set statusline +=%1*%=%5l%*             "current line
+	set statusline +=%2*/%L%*               "total lines
+	set statusline +=%1*%4v\ %*             "virtual column number
+	set statusline +=%5*\ %(<%{b:gitstatus}>%)
 
-" Control tabs with CTRL-left or right arrow  alt-arrow moves the tab
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
-nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
-nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+	" Always display the status line
+	 set laststatus=2
+endif
 
-" Allow closing of all tabs or show all buffers in tabs
-let notabs = 0
 
-" <F8> closes all open tabs
-nnoremap <silent> <F8> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Bar>:tab ball<Bar>:tabn<Bar>:endif<CR>
+if !exists('g:KyleVim_Disable_Tabs')
+	
+	" Control tabs with CTRL-left or right arrow  alt-arrow moves the tab
+	nnoremap <C-Left> :tabprevious<CR>
+	nnoremap <C-Right> :tabnext<CR>
+	nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+	nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+
+endif
 
 " Pressing <F3> will search the current folder for TODO statements
-imap <F3> <Esc>:grep -r --exclude=*~ TODO * <CR> :copen <CR>
-map <F3> :grep -r --exclude=*~ TODO * <CR> :copen <CR>
+if !exists('g:KyleVim_Disable_TODO')
+	imap <F3> <Esc>:grep -r --exclude=*~ TODO * <CR> :copen <CR>
+	map <F3> :grep -r --exclude=*~ TODO * <CR> :copen <CR>
+endif
 
 " Double tapping semicolon will search the current file for {% %} and allow
 " you to replace them
-inoremap ;; <esc>/{%[^%]*%}<cr>v/%}<cr><right>c
-
+if !exists('g:KyleVim_Disable_Colon_Replace')
+	inoremap ;; <esc>/{%[^%]*%}<cr>v/%}<cr><right>c
+endif
 
 " Enable fuzzy search using SHIFT-F
-set wildmenu
-nnoremap <S-F> :tabe **/*
 
-" Fuzzy search ignore
-set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
-set wildignore+=*.pdf,*.psd
-set wildignore+=*.log,*.aux,*.pdf
+if !exists('g:KyleVim_Disable_Fuzzy_Search')
+	set wildmenu
+	nnoremap <S-F> :tabe **/*
+
+	" Fuzzy search ignore
+	set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
+	set wildignore+=*.pdf,*.psd
+	set wildignore+=*.log,*.aux,*.pdf
+endif
 
 "----------------------------------------------------------------
 " Auto close matching characters
 " ---------------------------------------------------------------
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {
-inoremap {}     {}
 
-inoremap (      ()<Left>
-inoremap (<CR>  (<CR>)<Esc>O
-inoremap ((     (
-inoremap ()     ()
+if !exists('g:KyleVim_Disable_Auto_Brackets')
+	inoremap {      {}<Left>
+	inoremap {<CR>  {<CR>}<Esc>O
+	inoremap {{     {
+	inoremap {}     {}
 
-inoremap [      []<Left>
-inoremap [<CR>  [<CR>]<Esc>O
-inoremap [[     [
-inoremap []     []
+	inoremap (      ()<Left>
+	inoremap (<CR>  (<CR>)<Esc>O
+	inoremap ((     (
+	inoremap ()     ()
 
-inoremap "      ""<Left>
-inoremap "<CR>  "<CR>"<Esc>O
-inoremap ""     "
+	inoremap [      []<Left>
+	inoremap [<CR>  [<CR>]<Esc>O
+	inoremap [[     [
+	inoremap []     []
 
+	inoremap "      ""<Left>
+	inoremap "<CR>  "<CR>"<Esc>O
+	inoremap ""     "
+endif
 
 " Get the status of the current git repository
 function! CurrentGitStatus()
