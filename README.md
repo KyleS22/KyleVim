@@ -33,6 +33,18 @@ Use Shift-F to initiate a fuzzy search for file names
 ## Auto Close Brackets and quotes
 Automatically close opening brackets.  Double-tap the opening bracket to temporarily disable auto closing for this brace.
 
+# Installation
+This plugin can be installed using [Vundle](https://github.com/VundleVim/Vundle.vim).  Simply add the following line to your vimrc
+
+```
+Other Vundle Plugins
+
+" KyleVim 
+Plugin 'KyleS22/KyleVim' 
+
+```
+
+Then start up vim and run `:PluginInstall`
 
 
 # Testing Environment
