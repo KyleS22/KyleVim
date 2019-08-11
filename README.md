@@ -19,7 +19,7 @@ A statusline that displays:
 
 ## Easy Tab Controls
 - Easily switch between tabs using <C-Left> and <C-Right>
-- Close all tabs with <F8>
+- Move tabs around with <A-Left> and <A-Right>
 
 ## TODO Search
 Use <F3> to search the current project for TODO lines.  Easily navigate to them and edit. 
@@ -32,6 +32,16 @@ Use Shift-F to initiate a fuzzy search for file names
 
 ## Auto Close Brackets and quotes
 Automatically close opening brackets.  Double-tap the opening bracket to temporarily disable auto closing for this brace.
+
+## Easily Disable Any of These Features
+
+Don't like one of these features, but want the rest?  You can easily disable individual features from your .vimrc using something like this:
+
+```
+let g:KyleVim_Disable_Colours = 1
+```
+
+A full description on how to disable features is available in the [documentation](https://github.com/KyleS22/KyleVim/blob/1ec23fbfc9b3c8f3c4655e55149acf72bed20a7f/doc/KyleVim.txt#L28-L40).
 
 # Installation
 This plugin can be installed using [Vundle](https://github.com/VundleVim/Vundle.vim).  Simply add the following line to your vimrc

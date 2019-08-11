@@ -1,0 +1,163 @@
+*KyleVim.txt* Handy vim functionality for everyday use
+
+ _  __     _    __     ___           	~
+| |/ /   _| | __\ \   / (_)_ __ ___  	~
+| ' / | | | |/ _ \ \ / /| | '_ ` _ \ 	~
+| . \ |_| | |  __/\ V / | | | | | | |	~
+|_|\_\__, |_|\___| \_/  |_|_| |_| |_|	~
+     |___/          			~
+
+====================================================================
+CONTENTS                                            *KyleVimContents*
+
+    1. Usage ................ |KyleVimUsage|
+    2. Mappings ............. |KyleVimMappings|
+    	2.1 Tab Navigation... |KyleVimTabNav|
+	2.2 TODO Search ..... |KyleVimTODO|
+	2.3 Quick Fills ..... |KyleVimQuickFills|
+	2.4 Fuzzy Search .... |KyleVimFuzzySearch|
+	2.5 Bracket Auto Comp |KyleVimBrackets|
+    3. Configuration ........ |KyleVimConfiguration|
+    4. License .............. |KyleVimLicense|
+    5. Bugs ................. |KyleVimBugs|
+    6. Contributing ......... |KyleVimContributing|
+    7. Changelog ............ |KyleVimChangelog|
+    8. Credits .............. |KyleVimCredits|
+
+====================================================================
+Section 1: Usage                                        *KyleVimUsage*
+
+The plugin should work out of the box, if you install it correctly.  It can be installed
+using vundle from the main repository here: https://github.com/KyleS22/KyleVim
+
+The plugin mostly provides a set of useful mappings, which are outlined in the |KyleVimMappings| section.
+
+A new colour scheme is applied with this plugin, as well as a special statusline configuration.  All of the 
+available features can be disabled individually, as is described in detail in the |KyleVimConfiguration| section.
+
+====================================================================
+Section 2: Mappings                                  *KyleVimMappings*
+
+--------------------------------------------------------------------
+Tab Navigation:					       *KyleVimTabNav*
+
+<C-Left>	Switch to the previous tab in the buffer list
+<C-Right>	Switch to the next tab in the buffer list
+<A-Left>	Move the current tab left in the buffer list
+<A-Right> 	Move the current tab right in the buffer list
+
+--------------------------------------------------------------------
+TODO Search						*KyleVimTODO*
+
+<F3>		Searches the current project directory for TODO
+		statements and opens a list of matching lines in
+		the quickfix window.
+
+--------------------------------------------------------------------
+Quick Fills					  *KyleVimQuickFills*
+
+;;		Typing ';;' quickly will search the current buffer
+		for {% WHATEVER %} patterns, where WHATEVER is any
+		arbitrary string.  The {% WHATEVER %} pattern will
+		be removed and the cursor will be placed in its
+		position in INSERT mode. 
+		
+--------------------------------------------------------------------
+Fuzzy Search					 *KyleVimFuzzySearch*
+
+<SHIFT-F>	Open a fuzzy search command search box, where the
+		wildcard menu will display any files in the current
+		folder or subfolders that match the typed pattern.
+		You can select a file to open it with enter and navigate the
+		menu with the arrow keys.
+
+--------------------------------------------------------------------
+Bracket Auto Complete				    *KyleVimBrackets*
+
+KyleVim will auto complete any of the characters listed below.  
+Typing a single opening character will automatically add the 
+matching closing character and place the cursor in between for
+easy typing.  
+
+To ignore this functionality and only insert a single opening
+character, simply double type the opening character, and the 
+closing character will not be added.
+
+Example:
+	Typing '{ hello' will result in '{ hello }' in the buffer
+	Typing '(( test' wll result in '( test' in the buffer
+
+Available auto completes:
+
+'{', '(', '[', '"'
+
+====================================================================
+Section 3: Configuration		         *KyleVimConfiguraion*
+
+All of the features offered in this plugin can be individually
+disabled, so you can pick and choose how the plugin works for
+you.
+
+To disable a feature of the plugin, add the following line to 
+your .vimrc:
+
+set g:KyleVim_VARIABLE_NAME = 1
+
+where VARIABLE_NAME corresponds to one of the following:
+
+g:KyleVim_Disable_Auto_Brackets		Turns off auto completing
+					brackets
+					
+g:KyleVim_Disable_Fuzzy_Search		Turns off fuzzy search with
+					<SHIFT-F>
+					
+g:KyleVim_Disable_Colon_Replace		Turns off quick inserts with
+					';;'
+					
+g:KyleVim_Disable_TODO			Turns off TODO search with <F3>
+
+g:KyleVim_Disable_Tabs			Turns off tab navigation
+
+g:KyleVim_Disable_Statusline		Turns off custom statusline
+
+g:KyleVim_Disable_Colours		Turns off custom colourscheme
+
+====================================================================
+Section 4: License                                    *KyleVimLicense*
+
+KyleVim is available under the MIT license.  More information is available at: https://choosealicense.com/licenses/mit/
+
+====================================================================
+Section 5: Bugs                                          *KyleVimBugs*
+
+I am currently not aware of any bugs, but I'm sure there are a few!
+
+If you find any issues, please report them using the 'Issues' tab at the main repository, or click this link: https://github.com/KyleS22/KyleVim/issues
+
+A good bug report is as specific and descriptive as possible.  Please include as many details about your setup as possible.
+
+Thanks!
+
+====================================================================
+Section 6: Contributing				 *KyleVimContributing*
+
+The main repository can be found at https://github.com/KyleS22/KyleVim
+
+If you would like to make a contribution, please create a new branch for your feature and create a pull request when ready.
+
+Thanks!
+
+
+====================================================================
+Section 7: Changelog                                *KyleVimChangelog*
+
+0.0.0
+	- Added documentation.  Wooho!
+
+====================================================================
+Section 8: Credits                                    *KyleVimCredits*
+
+This plugin is a culmination of many years using vim and adding various 'hacks' to my vimrc.  It is largely inspired by many
+other plugins and hacks found around the web.  This is a general thanks to those who post their solutions online for others to find.
+
+Written and maintained by Kyle Seidenthal
