@@ -14,6 +14,14 @@ endif
 if !exists('g:KyleVim_Disable_Colours')
 	" Set colourscheme
 	colorscheme codedark
+	
+	set hlsearch
+        hi Search ctermbg=LightGray
+        hi Search ctermfg=Red
+
+        " Make double-<Esc> clear search highlights
+        nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
+
 endif
 
 
